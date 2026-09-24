@@ -1,0 +1,26 @@
+## Interface: 16001
+## Title: TinyTooltip - Remaster
+## Notes: TinyTooltip - Remaster
+## Author: itmeTeemo - Original Author (M), flow.zip (TBC Anniversary fixes)
+## Version: 2.5.6
+## SavedVariables: BigTipDB
+## SavedVariablesPerCharacter: TinyTooltipCharacterDB
+
+libs\lib.xml
+Core.lua
+Config.lua
+General.lua
+Anchor.lua
+Target.lua
+Unit.lua
+Model.lua
+Item.lua
+Spell.lua
+Quest.lua
+LinkID.lua
+Mount.lua
+SkinFrames.lua
+
+libs\Template.xml
+locales\locales.xml
+Options.lua
