@@ -145,8 +145,13 @@ end
 function addon:AutoSetTooltipWidth(tooltip)
     local width, w = 80
     for i = 1, tooltip:NumLines() do
-        w = tonumber(_G[tooltip:GetName() .. "TextLeft" .. i]:GetWidth())
-        width = max(width, w)
+        w = _G[tooltip:GetName() .. "TextLeft" .. i]:GetWidth()
+        if (not (issecretvalue and issecretvalue(w))) then
+            w = tonumber(w)
+            if (w) then
+                width = max(width, w)
+            end
+        end
     end
     width = width + 6
     tooltip:SetMinimumWidth(width)
@@ -353,6 +358,7 @@ end
 -- 頭銜 @param2:true為前綴
 function addon:GetTitle(name, pvpName)
     if (not pvpName) then return end
+    if (issecretvalue and issecretvalue(pvpName)) then return end
     if (name == pvpName) then return end
     local pos = string.find(pvpName, name)
     local title = pvpName:gsub(name, "", 1)

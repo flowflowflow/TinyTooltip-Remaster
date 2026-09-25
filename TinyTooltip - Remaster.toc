@@ -2,7 +2,7 @@
 ## Title: TinyTooltip - Remaster
 ## Notes: TinyTooltip - Remaster
 ## Author: itmeTeemo - Original Author (M), flow.zip (API change fixes)
-## Version: 2.6.6
+## Version: 2.6.7
 ## SavedVariables: BigTipDB
 ## SavedVariablesPerCharacter: TinyTooltipCharacterDB
 
