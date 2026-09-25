@@ -159,7 +159,11 @@ function addon:FindLine(tooltip, keyword)
     local line, text
     for i = 2, tooltip:NumLines() do
         line = _G[tooltip:GetName() .. "TextLeft" .. i]
-        text = line:GetText() or ""
+        text = line:GetText()
+        if (issecretvalue and issecretvalue(text)) then
+            text = ""
+        end
+        text = text or ""
         if (strfind(text, keyword)) then
             return line, i, _G[tooltip:GetName() .. "TextRight" .. i]
         end
