@@ -1,19 +1,15 @@
-
 -------------------------------------
 -- Core Author:M
 -------------------------------------
 
--- Hack to call for namespaces from older usage
+TinyTooltip = TinyTooltip or {}
+local addon = TinyTooltip
 
-local EnableAddOn = C_AddOns and C_AddOns.EnableAddOn or EnableAddOn
+-- Namespace update fixes (see Compat.lua for definitions) 
 
-local LoadAddOn = C_AddOns and C_AddOns.LoadAddOn or LoadAddOn
+local GetItemInfo = addon.GetItemInfo
 
-local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
-
--- End Hack
-
-TinyTooltip = {}
+-- =======================================================
 
 local LibEvent = LibStub:GetLibrary("LibEvent.7000")
 local LibMedia = LibStub:GetLibrary("LibSharedMedia-3.0", true)
@@ -38,9 +34,6 @@ local UnitGroupRolesAssigned = UnitGroupRolesAssigned or function() end
 local UnitIsQuestBoss = UnitIsQuestBoss or function() end
 local IsFlying = IsFlying or function() end
 local C_BattleNet_GetAccountInfoByGUID = C_BattleNet and C_BattleNet.GetAccountInfoByGUID or function() end
-
-
-local addon = TinyTooltip
 
 -- language & global vars
 addon.L, addon.G = {}, {}

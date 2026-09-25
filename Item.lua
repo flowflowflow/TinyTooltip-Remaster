@@ -1,12 +1,12 @@
-
+local addon = TinyTooltip
 local LibEvent = LibStub:GetLibrary("LibEvent.7000")
 
-local GetItemInfo = GetItemInfo or C_Item.GetItemInfo
+-- Namespace update fixes (see Compat.lua for definitions) 
 
-local GetItemQualityColor = GetItemQualityColor or C_Item.GetItemQualityColor
+local GetItemInfo = addon.GetItemInfo
+local GetItemQualityColor = addon.GetItemQualityColor
 
-local addon = TinyTooltip
-
+-- ======================================================
 
 local function ColorBorder(tip, r, g, b)
     if (addon.db.item.coloredItemBorder) then

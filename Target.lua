@@ -1,13 +1,12 @@
 
 local LibEvent = LibStub:GetLibrary("LibEvent.7000")
+local addon = TinyTooltip
 
 local YOU = YOU
 local NONE = NONE
 local EMPTY = EMPTY
 local TARGET = TARGET
 local TOOLTIP_UPDATE_TIME = TOOLTIP_UPDATE_TIME or 0.2
-
-local addon = TinyTooltip
 
 local function GetTargetString(unit)
     if (not UnitExists(unit)) then return end
