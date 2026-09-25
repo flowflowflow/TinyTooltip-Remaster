@@ -330,16 +330,19 @@ end
 -- 移動速度
 function addon:GetUnitSpeed(unit)
     local _, speed, flightSpeed, swimSpeed = GetUnitSpeed(unit)
+    if (issecretvalue and (issecretvalue(speed) or issecretvalue(flightSpeed) or issecretvalue(swimSpeed))) then
+        return
+    end
     if (not speed or speed == 0) then return end
     speed = speed/BASE_MOVEMENT_SPEED*100
     swimSpeed = swimSpeed/BASE_MOVEMENT_SPEED*100
-	flightSpeed = flightSpeed/BASE_MOVEMENT_SPEED*100
-	if (UnitIsOtherPlayersPet(unit)) then
+    flightSpeed = flightSpeed/BASE_MOVEMENT_SPEED*100
+    if (UnitIsOtherPlayersPet(unit)) then
     elseif (IsSwimming(unit)) then
-		speed = swimSpeed
-	elseif (IsFlying(unit)) then
-		speed = flightSpeed
-	end
+        speed = swimSpeed
+    elseif (IsFlying(unit)) then
+        speed = flightSpeed
+    end
     return speed+0.5
 end
 

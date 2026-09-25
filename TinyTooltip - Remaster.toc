@@ -2,7 +2,7 @@
 ## Title: TinyTooltip - Remaster
 ## Notes: TinyTooltip - Remaster
 ## Author: itmeTeemo - Original Author (M), flow.zip (TBC Anniversary fixes)
-## Version: 2.6.0
+## Version: 2.6.1
 ## SavedVariables: BigTipDB
 ## SavedVariablesPerCharacter: TinyTooltipCharacterDB
 
