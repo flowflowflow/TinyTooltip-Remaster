@@ -1,0 +1,9 @@
+package-as: TinyTooltip - Remaster
+
+# excludes from zip
+ignore:
+  - .github
+  - .gitignore
+  - .pkgmeta
+  - README.md
+  - CHANGELOG.md
