@@ -3,7 +3,10 @@ local LibEvent = LibStub:GetLibrary("LibEvent.7000")
 
 local GetItemInfo = GetItemInfo or C_Item.GetItemInfo
 
+local GetItemQualityColor = GetItemQualityColor or C_Item.GetItemQualityColor
+
 local addon = TinyTooltip
+
 
 local function ColorBorder(tip, r, g, b)
     if (addon.db.item.coloredItemBorder) then

@@ -1,0 +1,17 @@
+.vscode/*
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.release/
+*.zip
+
+.luacheckrc.cache
+luacov.*.out
+
+*.swp
+*.swo
+*~
+
+*.log
